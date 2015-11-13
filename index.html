@@ -11,68 +11,146 @@
 
     <title>Andrew's Profile</title>
 
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <!-- for FF, Chrome, Opera -->
     <link rel="shortcut icon" href="img/icon.png" type="image/png">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
-<body id="page-top" >
-    <div class="background">
-    </div>
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="min-width:320px">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll">Home</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Andrew Liu</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" target="_blank" href="https://www.linkedin.com/in/andrewliuh">Linkedin</a>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" target="_blank" href="https://github.com/Eschew">Github</a>
+                        <a class="page-scroll" href="https://www.linkedin.com/in/andrewliuh">LinkedIn</a>
                     </li>
                     <li>
-                        <a class="page-scroll" target="_blank" href="../documents/resume.pdf">Résumé</a>
+                        <a class="page-scroll" href="http://github.com/eschew">Github</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="documents/resume.pdf">Resume</a>
                     </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
+        <!-- /.container -->
     </nav>
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>Andrew Liu</h1>
-                <hr class="light">
-                <p><b>Student at UC Berkeley studying Electrical Engineering and Computer Science
-                </b>    
-                </p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Link to projects</a>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section background">
+        <div class="container" style="max-width:600px">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="img/profile.jpg" class="img-thumbnail" style="width:200px"> 
+                    <h1 style="text-transform:uppercase"><strong>Andrew Liu</strong></h1>
+                    <hr class="separator">
+                    <p><b>Student at UC Berkeley studying Electrical Engineering and Computer Science with an interest in Machine Learning, Data Science, and Computer Vision. Researcher assitant at <a style="color: rgba(255,255,255,.9);" href="http://bids.berkeley.edu/">BIDS</a>.
+                </div>
             </div>
         </div>
-    </header>
+    </section>
+    <div style="background-color:white;min-height:3px">
+    </div>
+    <div class="background-1">
+        <!-- About Section -->
+        <center>
+        <section id="about" class="about-section" valign="middle" style="max-width:100%">
+            <h1 style="color:white;font-family:Merriweather,'Helvetica Neue',Arial,sans-serif;">Projects</h1>
+            <hr class=="separator">
+            <div class="container" style="color:white;padding:10px">
+
+                    <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
+                        <br>
+                      <div class="media-left media-middle">
+                          <img class="media-object thumbnail-c" src="img/rlogo.png" alt="...">
+                      </div>
+                      <div class="media-body" style="">
+                        <h4 class="media-heading"><strong>Reddit Link Bot<strong></h4>
+                        Using <a href="https://praw.readthedocs.org/en/stable/" style="color:white">PRAW API</a> and Python, created a Reddit Bot that identified comments with Reddit links, parsed the contents of the link, and posted a CSS-formatted reply. The purpose was to help users on mobile or slow internet by saving them unnecessary clicks. Although the bot is no longer active or hosted, the reception was relatively positive on from the Reddit community.
+                      </div>
+                      <br>
+                    </div>
+                    <hr class="separator">
+                    <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
+                    <br>
+                      <div class="media-left media-middle">
+                          <img class="media-object thumbnail-c" src="img/lol.png" alt="...">
+                      </div>
+                      <div class="media-body" style="">
+                         <h4 class="media-heading"><strong>Machine Learning for League of Legends<strong></h4>
+                         Following in the footsteps of Deep Blue, I am working on a project for training a machine for League of Legends. The first step is focused on predicting outcomes given a game state. By being able to predict outcomes based on game states, a machine could determine the best objective to pursue to maximize win rate.
+                      </div>
+                      <br>
+                    </div>
+            </div>
+        </section>
+        <br>
+    </center>
+    <div style="background-color:white;min-height:3px">
+    </div>
+    <center>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section background-2" style="position:absolute">
+            <div class="container" style="max-width:800px">
+                    <h1>About me</h1>
+                    <div class="panel panel-default" style="background-color:rgba(255,255,255,.6)">
+                      <div class="panel-body">
+                        I am a second-year Electrical Engineering Computer Science student. Outside of classwork I am a part of the HKN (Eta Kapp Nu) Honor Society which offers various services to undergraduate EECS students. 
+                        <br>
+                        <br>
+                        In addition I enjoy participating in hackathons, brainstorming ideas, and collecting t-shirts. 
+                        <br>
+                        <br>
+                        Contact me?
+                        <br>
+                        e-mail: ahliu@berkeley.edu
+                      </div>
+                    </div>
+
+            </div>
+            <img src="img/berkeley.png" style="max-width:15%; min-width:100px"></img>
+        </section>
+    </center>   
+    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -80,8 +158,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 
-</body>     
+</body>
+
 </html>
