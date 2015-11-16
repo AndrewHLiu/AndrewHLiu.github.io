@@ -20,5 +20,11 @@ function updateData(prevData){
 }
 
 $( document ).ready(function() {
-    notifyServer();
+	x = localStorage.getItem("HasAccessed")
+	if(x){
+
+	}
+    else {
+    	notifyServer();
+    }
   });
