@@ -6,7 +6,9 @@ function notifyServer(){
 	var d = new Date();
 	var n = d.getMonth();
 	var y = d.getFullYear();
-	x = root.child("Hits").child(y.toString()+"-"+n.toString());
+	var day = d.getDate();
+	newIP = myip.replace(/\./g, ",");
+	x = root.child("Hits").child(day.toString()+"-"+n.toString()+"-"+y.toString()).child(newIP);
 	x.transaction(updateData);
 	localStorage.setItem("HasAccessed", "Yes")
 }
@@ -16,12 +18,16 @@ function sendNotification(){
 }
 
 function updateData(prevData){
-	prevData=prevData+1;
-	return prevData;
+	if(prevData){
+		return prevData+1;
+	}
+	else {
+		return 1;
+	}
 }
 
 $( document ).ready(function() {
-	x = localStorage.getItem("HasAccessed")
+	x = localStorage.getItem("HasAccessed");
 	if(x){
 
 	}
