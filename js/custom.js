@@ -8,6 +8,7 @@ function notifyServer(){
 	var y = d.getFullYear();
 	x = root.child("Hits").child(y.toString()+"-"+n.toString());
 	x.transaction(updateData);
+	localStorage.setItem("HasAccessed", "Yes")
 }
 
 function sendNotification(){
