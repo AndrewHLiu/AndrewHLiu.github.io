@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>What IS Machine Learning?</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- for FF, Chrome, Opera -->
     <link rel="shortcut icon" href="img/icon.png" type="image/png">
-
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
-
-
     <link rel="stylesheet" href="css/custom.css" type="text/css">
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -29,179 +21,293 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+      
       ga('create', 'UA-70157890-2', 'auto');
       ga('send', 'pageview');
-    
+      
     </script>
-</head>
-
-<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="min-width:320px;min-height:700px">
+  </head>
+  <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="min-width:320px;min-height:700px">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Andrew Liu</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="https://www.linkedin.com/in/andrewliuh">LinkedIn</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="http://github.com/eschew">Github</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="documents/cv.pdf">CV</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="documents/resume.pdf">Resume</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand page-scroll" href="#page-top">Andrew H. Liu</a>
         </div>
-        <!-- /.container -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+            <li class="hidden">
+              <a class="page-scroll" href="#page-top"></a>
+            </li>
+            <li>
+              <a class="page-scroll" href="https://www.linkedin.com/in/andrewliuh">LinkedIn</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="http://github.com/eschew">Github</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="documents/cv.pdf">CV</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="documents/resume.pdf">Resume</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
     </nav>
-
     <!-- Intro Section -->
     <section id="intro" class="intro-section background">
-        <div class="container" style="max-width:600px;min-height:100%">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img src="img/profile.jpg" class="img-thumbnail" style="width:200px"> 
-                    <h1 style="text-transform:uppercase"><strong>Andrew Liu</strong></h1>
-                    <h3>Google Research and Machine Intelligence</h3>
-                    <hr class="separator">
-                    <p><b>What IS Machine Learning?</b></p>
-                    <hr class="seperator">
-                    <p>I'm interested in solving challenging vision, graphics, and representation learning problems.</p>
-                </div>
-            </div>
+      <div class="container" style="max-width:600px;min-height:100%">
+        <div class="row">
+          <div class="col-lg-12">
+            <img src="img/profile.jpg" class="img-thumbnail" style="width:200px"> 
+            <h1 style="text-transform:uppercase"><strong>Andrew H. Liu</strong></h1>
+            <h3>Google Research and Machine Intelligence</h3>
+            <hr class="separator">
+            <p><b>What IS Machine Learning?</b></p>
+            <hr class="seperator">
+            <p>I'm interested in solving challenging vision, graphics, and representation learning problems.</p>
+          </div>
         </div>
+      </div>
     </section>
     <div style="background-color:white;min-height:3px">
     </div>
     <div class="background-1">
-        <!-- About Section -->
-        <center>
+      <!-- About Section -->
+      <center>
         <section id="about" class="about-section" valign="middle" style="max-width:100%">
-            <h1 style="color:white;font-family:Merriweather,'Helvetica Neue',Arial,sans-serif;">Projects</h1>
-            <hr class=="separator">
-            <div class="container" style="color:white;padding:10px">
-
-                    <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
-                        <br>
-                      <div class="media-left media-middle">
-                          <img class="media-object thumbnail-c" style="padding-left:10px" src="img/forensics.png" alt="...">
-                      </div>
-                      <div class="media-body" style="">
-                        <h4 class="media-heading"><strong><a href="https://minyoungg.github.io/selfconsistency/", style="color:white">Fighting Fake News: Image Splice Detection via Learned Self-Consistency</a></strong></h4>
-                        <h4><a href="https://arxiv.org/abs/1805.04096" style="color:white">Paper</a></h4>
-                        <h5><a style="color:white" href="http://minyounghuh.com/">Minyoung Huh</a>*, <b>Andrew Liu</b>*, <a style="color:white" href="http://andrewowens.com/">Andrew Owens</a>, <a style="color:white" href"https://people.eecs.berkeley.edu/~efros/">Alexei A. Efros</a></h5>
-                        <br>
-                        <p>
-                      <a class="btn btn-primary" data-toggle="collapse" href="#forensics_abs" role="button" aria-expanded="false" aria-controls="forensics_abs">
-                        Abstract
-                      </a>
-                    </p>
-                    <div class="collapse" id="forensics_abs">
-                      <div class="card card-body">
-                        <p style="text-align:left">
-        Advances in photo editing and manipulation tools have made it significantly easier to create fake imagery. Learning to detect such manipulations, however, remains a challenging problem due to the lack of sufficient training data. In this paper, we propose a model that learns to detect visual manipulations from unlabeled data through self-supervision. Given a large collection of real photographs with automatically recorded EXIF metadata, we train a model to determine whether an image is self-consistent — that is, whether its content could have been produced by a single imaging pipeline. We apply this self-supervised learning method to the task of detecting and localizing image splices. Although the proposed model obtains state-of-the-art performance on several benchmarks, we see it as merely a step in the long quest for a truly general-purpose visual forensics tool.</p>
-                        <br>
-                      </div>
-                    </div>
-                      </div>
-                      <br>
-                    </div>
-
-                    <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
-                        <br>
-                      <div class="media-left media-middle">
-                          <img class="media-object thumbnail-c" style="padding-left:10px" src="img/deform.png" alt="...">
-                      </div>
-                      <div class="media-body" style="">
-                        <h4 class="media-heading"><strong><a href="https://eschew.github.io/deformable_rendering", style="color:white">Rendering onto deformable surface using visible ink</a></strong></h4>
-                        <h5><b>Andrew Liu</b></h5>
-                        Undergraduate final project for <a href="https://inst.eecs.berkeley.edu/~cs194-26/fa16/" style="color:white">CS 194-26</a>. Used SIFT Flow algorithm to project images onto an actively deforming surface.
-                      </div>
-                      <br>
-                    </div>
-<!-- 
-                    <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
-                        <br>
-                      <div class="media-left media-middle">
-                          <img class="media-object thumbnail-c" style="padding-left:10px" src="img/rlogo.png" alt="...">
-                      </div>
-                      <div class="media-body" style="">
-                        <h4 class="media-heading"><strong>Reddit Link Bot</strong></h4>
-                        <h5><b>Andrew Liu</b></h5>
-                        Using <a href="https://praw.readthedocs.org/en/stable/" style="color:white">PRAW API</a> and Python, created a Reddit Bot that identified comments with Reddit links, parsed the contents of the link, and posted a CSS-formatted reply. The purpose was to help users on mobile or slow internet by saving them unnecessary clicks. Although the bot is no longer active or hosted, the reception was relatively positive on from the Reddit community.
-                      </div>
-                      <br>
-                    </div> -->
-                    <hr class="separator">
+          <h1 style="color:white;font-family:Merriweather,'Helvetica Neue',Arial,sans-serif;">Publications</h1>
+          <hr class=="separator">
+          <div class="container" style="color:white;padding:10px">
+            <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
+              <div class="media-left media-middle" style="width:40%">
+                <img class="media-object" style="padding-left:10px;width:100%;min-width:250px" src="https://infinite-nature.github.io/teaser.gif" alt="...">
+              </div>
+              <div class="media-body" style="">
+                <br>
+                <h4 class="media-heading"><strong><a href="https://infinite-nature.github.io/", style="color:white">Infinite Nature</a></strong></h4>
+                <h5 style="color:LightGray"><b style="color:white">Andrew Liu</b>*,
+                  <a style="color:LightGray" href="https://scholar.google.com/citations?user=IkpNZAoAAAAJ">Richard Tucker</a>*,
+                  <a style="color:LightGray" href="https://varunjampani.github.io/">Varun Jumpani</a>,
+                  <a style="color:LightGray" href="http://www.ameeshmakadia.com/index.html">Ameesh Makadia</a>,
+                  <a style="color:LightGray" href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a>,
+                  <a style="color:LightGray" href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a>
+                </h5>
+                <h6></h6>
+                <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#inf_nat_abs" role="button" aria-expanded="false" aria-controls="inf_nat_abs">
+                  Abstract
+                  </a>
+                </p>
+                <div class="collapse" id="inf_nat_abs">
+                  <div class="card card-body">
+                    <p style="text-align:left;color:LightGray">We introduce the problem of perpetual view generation—long-range generation of novel views corresponding to an arbitrarily long camera trajectory given a single image. This is a challenging problem that goes far beyond the capabilities of current view synthesis methods, which work for a limited range of viewpoints and quickly degenerate when presented with a large camera motion. Methods designed for video generation also have limited ability to produce long video sequences and are often agnostic to scene geometry. We take a hybrid approach that integrates both geometry and image synthesis in an iterative render, refine, and repeat framework, allowing for long-range generation that cover large distances after hundreds of frames. Our approach can be trained from a set of monocular video sequences without any manual annotation. We propose a dataset of aerial footage of natural coastal scenes, and compare our method with recent view synthesis and conditional video generation baselines, showing that it can generate plausible scenes for much longer time horizons over large camera trajectories compared to existing methods.</p>
+                    <br>
+                  </div>
+                </div>
+                <h6>
+                  <a href="https://arxiv.org/abs/2012.09855" style="color:white"> [Paper] </a>
+                  <a href="https://infinite-nature.github.io/" style="color:white"> [Webpage] </a>
+                </h6>
+              </div>
+              <br>
             </div>
+            <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
+              <div class="media-left media-middle" style="width:40%">
+                <img class="media-object" style="padding-left:10px;width:100%;min-width:250px" src="https://homes.cs.washington.edu/~yifan1/images/repop.png" alt="...">
+              </div>
+              <div class="media-body" style="">
+                <br>
+                <h4 class="media-heading"><strong><a href="https://arxiv.org/abs/2103.16183", style="color:white">Repopulating Street Scenes</a></strong></h4>
+                <h5 style="color:LightGray">
+                  <a style="color:LightGray" href="https://homes.cs.washington.edu/~yifan1/">Yifan Wang</a>,
+                  <b style="color:white">Andrew Liu</b>,
+                  <a style="color:LightGray" href="https://scholar.google.com/citations?user=IkpNZAoAAAAJ">Richard Tucker</a>,
+                  <a style="color:LightGray" href="https://jiajunwu.com/">Jiajun Wu</a>,
+                  <a style="color:LightGray" href="https://homes.cs.washington.edu/~curless/">Brian Curless</a>,
+                  <a style="color:LightGray" href="https://homes.cs.washington.edu/~seitz/">Steve Seitz</a>,
+                  <a style="color:LightGray" href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a>
+                </h5>
+                <h6></h6>
+                <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#repop_abs" role="button" aria-expanded="false" aria-controls="repop_abs">
+                  Abstract
+                  </a>
+                </p>
+                <div class="collapse" id="repop_abs">
+                  <div class="card card-body">
+                    <p style="text-align:left;color:LightGray">We present a framework for automatically reconfiguring images of street scenes by populating, depopulating, or repopulating them with objects such as pedestrians or vehicles. Applications of this method include anonymizing images to enhance privacy, generating data augmentations for perception tasks like autonomous driving, and composing scenes to achieve a certain ambiance, such as empty streets in the early morning. At a technical level, our work has three primary contributions: (1) a method for clearing images of objects, (2) a method for estimating sun direction from a single image, and (3) a way to compose objects in scenes that respects scene geometry and illumination. Each component is learned from data with minimal ground truth annotations, by making creative use of large-numbers of short image bursts of street scenes. We demonstrate convincing results on a range of street scenes and illustrate potential applications.</p>
+                    <br>
+                  </div>
+                </div>
+                <h6>
+                  <a href="https://arxiv.org/abs/2103.16183" style="color:white"> [Paper] </a>
+                </h6>
+              </div>
+              <br>
+            </div>
+            <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
+              <div class="media-left media-middle" style="width:40%">
+                <img class="media-object" style="padding-left:10px;width:100%;min-width:250px" src="img/paris_rot_web.gif" alt="...">
+              </div>
+              <div class="media-body" style="">
+                <br>
+                <h4 class="media-heading"><strong><a href="https://factorize-a-city.github.io/", style="color:white">Learning to Factorize and Relight a City</a></strong></h4>
+                <h5 style="color:LightGray"><b style="color:white">Andrew Liu</b>,
+                  <a style="color:LightGray" href="https://people.eecs.berkeley.edu/~shiry/">Shiry Ginosar</a>,
+                  <a style="color:LightGray" href="https://people.eecs.berkeley.edu/~tinghuiz/">Tinghui Zhou</a>,
+                  <a style="color:LightGray" href="https://people.eecs.berkeley.edu/~efros/">Alexei A. Efros</a>,
+                  <a style="color:LightGray" href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a>
+                </h5>
+                <h6 style="color:LightGray">European Conference on Computer Vision 2020</h6>
+                <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#factorize_abs" role="button" aria-expanded="false" aria-controls="factorize_abs">
+                  Abstract
+                  </a>
+                </p>
+                <div class="collapse" id="factorize_abs">
+                  <div class="card card-body">
+                    <p style="text-align:left;color:LightGray">We propose a learning-based framework for disentangling outdoor scenes into temporally-varying illumination and permanent scene factors. Inspired by the classic intrinsic image decomposition, our learning signal builds upon two insights: 1) combining the disentangled factors should reconstruct the original image, and 2) the permanent factors should stay constant across multiple temporal samples of the same scene. To facilitate training, we assemble a city-scale dataset of outdoor timelapse imagery from Google Street View, where the same locations are captured repeatedly through time. This data represents an unprecedented scale of spatio-temporal outdoor imagery. We show that our learned disentangled factors can be used to manipulate novel images in realistic ways, such as changing lighting effects and scene geometry.</p>
+                    <br>
+                  </div>
+                </div>
+                <h6>
+                  <a href="https://arxiv.org/abs/2008.02796" style="color:white"> [Paper] </a>
+                  <a href="https://factorize-a-city.github.io/" style="color:white"> [Webpage] </a>
+                </h6>
+              </div>
+              <br>
+            </div>
+            <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
+              <br>
+              <div class="media-left media-middle" style="width:40%;min-width:200px">
+                <img class="media-object" style="padding-left:10px;width:100%;min-width:250px" src="img/forensics.png" alt="...">
+              </div>
+              <div class="media-body" style="">
+                <h4 class="media-heading"><strong><a href="https://minyoungg.github.io/selfconsistency/", style="color:white">Fighting Fake News: Image Splice Detection via Learned Self-Consistency</a></strong></h4>
+                <h5 style="color:LightGray">
+                  <a style="color:LightGray" href="http://minyounghuh.com/">Minyoung Huh</a>*,
+                  <b style="color:white">Andrew Liu</b>*,
+                  <a style="color:LightGray" href="http://andrewowens.com/">Andrew Owens</a>,
+                  <a style="color:LightGray" href"https://people.eecs.berkeley.edu/~efros/">Alexei A. Efros</a>
+                </h5>
+                <h6 style="color:LightGray">European Conference on Computer Vision 2018</h6>
+                <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#forensics_abs" role="button" aria-expanded="false" aria-controls="forensics_abs">
+                  Abstract
+                  </a>
+                </p>
+                <div class="collapse" id="forensics_abs">
+                  <div class="card card-body">
+                    <p style="text-align:left;color:LightGray">
+                      Advances in photo editing and manipulation tools have made it significantly easier to create fake imagery. Learning to detect such manipulations, however, remains a challenging problem due to the lack of sufficient training data. In this paper, we propose a model that learns to detect visual manipulations from unlabeled data through self-supervision. Given a large collection of real photographs with automatically recorded EXIF metadata, we train a model to determine whether an image is self-consistent — that is, whether its content could have been produced by a single imaging pipeline. We apply this self-supervised learning method to the task of detecting and localizing image splices. Although the proposed model obtains state-of-the-art performance on several benchmarks, we see it as merely a step in the long quest for a truly general-purpose visual forensics tool.
+                    </p>
+                    <br>
+                  </div>
+                </div>
+                <h6>
+                  <a href="https://arxiv.org/abs/1805.04096" style="color:white"> [Paper] </a>
+                  <a href="https://minyoungg.github.io/selfconsistency/" style="color:white"> [Webpage] </a>
+                </h6>
+              </div>
+              <br>
+            </div>
+          </div>
+          <h1 style="color:white;font-family:Merriweather,'Helvetica Neue',Arial,sans-serif;">Projects</h1>
+          <hr class=="separator">
+          <div class="container" style="color:white;padding:10px">
+            <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
+              <br>
+              <div class="media-left media-middle" style="width:40%;min-width:200px">
+                <img class="media-object" style="padding-left:10px;width:100%;min-width:250px" src="img/gen_feats.png" alt="...">
+              </div>
+              <div class="media-body" style="width:75%">
+                <h4 class="media-heading"><strong><a href="https://andrewhliu.github.io/generalized_feat_appearance.pdf",
+                  style="color:white">Generalized Apperance Features for Object Tracking</a></strong></h4>
+                <h5 style="color:LightGray">
+                    <b style="color:white">Andrew Liu</b>*,
+                    <a style="color:LightGray" href="https://sites.google.com/site/xinyutan17/home">Dennis Tan</a>*</h5>
+                <p style="text-align:left;color:LightGray">We used Siamese Networks to learn feature encoders for objects that are invariant to pose changes and apperances. By using Kalman filtering, we are able to generate object tracks based on similarity scores.</p>
+              </div>
+              <br>
+            </div>
+            <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
+              <br>
+              <div class="media-left media-middle" style="width:40%;min-width:200px">
+                <img class="media-object" style="padding-left:10px;width:100%;min-width:250px" src="https://eschew.github.io/deformable_rendering/resources/result3.gif" alt="...">
+              </div>
+              <div class="media-body" style="">
+                <h4 class="media-heading"><strong><a href="https://eschew.github.io/deformable_rendering", style="color:white">Rendering onto deformable surface using visible ink</a></strong></h4>
+                <h5><b>Andrew Liu</b></h5>
+                <p style="text-align:left;color:LightGray">Undergraduate final project for <a href="https://inst.eecs.berkeley.edu/~cs194-26/fa16/" style="color:white">CS 194-26</a>. Used SIFT Flow algorithm to project images onto an actively deforming surface.</p>
+              </div>
+              <br>
+            </div>
+            <!-- 
+              <div class="media panel panel-default" style="background-color:rgba(255,255,255,.1)">
+                  <br>
+                <div class="media-left media-middle">
+                    <img class="media-object" style="padding-left:10px;width:100%;min-width:250pxrlogo.png" alt="...">
+                </div>
+                <div class="media-body" style="">
+                  <h4 class="media-heading"><strong>Reddit Link Bot</strong></h4>
+                  <h5><b>Andrew Liu</b></h5>
+                  Using <a href="https://praw.readthedocs.org/en/stable/" style="color:white">PRAW API</a> and Python, created a Reddit Bot that identified comments with Reddit links, parsed the contents of the link, and posted a CSS-formatted reply. The purpose was to help users on mobile or slow internet by saving them unnecessary clicks. Although the bot is no longer active or hosted, the reception was relatively positive on from the Reddit community.
+                </div>
+                <br>
+              </div> -->
+            <hr class="separator">
+          </div>
         </section>
         <br>
-    </center>
-    <div style="background-color:white;min-height:3px">
-    </div>
-    <center>
+      </center>
+      <div style="background-color:white;min-height:3px">
+      </div>
+      <center>
         <!-- Contact Section -->
         <section id="contact" class="contact-section background-2" style="position:absolute">
-            <div class="container" style="max-width:400px;min-height:100%">
-                    <h1>About me</h1>
-                    <div class="panel panel-default" style="background-color:rgba(255,255,255,.6)">
-                      <div class="panel-body">
-                        Contact me?
-                        <br>
-                        e-mail: andrew@ml.berkeley.edu
-                      </div>
-                    </div>
+          <div class="container" style="max-width:400px;min-height:100%">
+            <div class="panel panel-default" style="background-color:rgba(255,255,255,.6)">
+              <div class="panel-body">
+                Contact me?
+                <br>
+                e-mail: andrew@ml.berkeley.edu
+              </div>
             </div>
+          </div>
         </section>
-    </center>   
+      </center>
     </div>
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
-
     <!-- Firebase Tracking-->
     <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
     <script src="js/custom.js"></script>
     <script type="text/javascript" src="https://www.l2.io/ip.js?var=myip"></script>
-</body>
-
+  </body>
 </html>
